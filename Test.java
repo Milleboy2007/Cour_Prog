@@ -1,5 +1,8 @@
 public class Test {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
+            int rand =(int) (Math.random() * (17-13+1)) + 13;
+
+
+            System.out.println(rand);
     }
 }

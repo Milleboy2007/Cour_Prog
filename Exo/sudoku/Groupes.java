@@ -108,6 +108,44 @@ public static void testFindPlaceable(Groupes groupe, String should){
     }
 }
 
+public int findAndSetPlaceableCase(){
+    for(int val = 1; val < 10; val++){
+        if(this.valeurPossibles[val - 1]){
+            for (int i = 0; i < 9; i++) {
+                if(this.cases[i].isLastPossible(val)){
+                    this.cases[i].setValue(val);
+                    return val - 1;
+                }
+            }
+        }
+    }
+
+    int nbPoss;
+    int idx;
+    for (int val = 1; val < 10; val++) {
+        nbPoss = 0;
+        idx = -1;
+
+        for (int i = 0; i < 9; i++) {
+            if(this.cases[i].valeurPossibles[val -1]){
+                nbPoss++;
+                idx = i;
+            }
+            }
+            if(nbPoss == 1){
+                this.cases[idx].setValue(val);
+            }
+            if(nbPoss == 0){
+                System.out.println("Erreur sudoku impossible");
+                System.exit(0);
+            }
+        }
+    return -1;
+
+}
+
 
 
 }
+
+
