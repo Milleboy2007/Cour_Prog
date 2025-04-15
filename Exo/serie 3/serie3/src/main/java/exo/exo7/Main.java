@@ -176,6 +176,7 @@ class Objet{
         return this.xp == 0;
     }
 
+<<<<<<< HEAD
     public void action(){}
     public void takeXp(Objet obj){}
 }
@@ -188,10 +189,26 @@ class Food extends Objet{
     @Override
     public String toString(){
         return Integer.toString(getXp());
+=======
+    public void takeXp(Objet obj){
+
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+}
+
+class Food extends Object{
+    public Food(int xp, Temperament attitude){
+        super();
+>>>>>>> 7e9fc20be6c0390605207646c7d059881535cee4
     }
 
 }
 
+<<<<<<< HEAD
 class Boss extends Objet{
     public Boss(int xp, Temperament attitude){
         super(xp, attitude);
@@ -199,10 +216,20 @@ class Boss extends Objet{
 
     public void takeXp(Objet obj){
         obj.setXp(0);
+=======
+class Boss extends Object{
+    public Boss(int xp, Temperament attitude){
+        super();
+    }
+
+    public void takeXp(Objet obj){
+
+>>>>>>> 7e9fc20be6c0390605207646c7d059881535cee4
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "B["+power()+","+this.xp+"]";
     }
 }
@@ -232,10 +259,27 @@ class Player extends Objet{
         }else{
             this.takeXp(next);
         }
+=======
+        return "B["+power()+","+""+"]";
+    }
+}
+
+class Player extends Object{
+    public Player(int xp, Temperament attitude){
+        super();
+    }
+
+    public void takeXp(Objet obj){
+
+>>>>>>> 7e9fc20be6c0390605207646c7d059881535cee4
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "P("+this.nom+")"+"["+power()+","+getXp()+"]";
+=======
+        return super.toString();
+>>>>>>> 7e9fc20be6c0390605207646c7d059881535cee4
     }
 }
